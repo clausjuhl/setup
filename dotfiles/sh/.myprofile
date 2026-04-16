@@ -1,0 +1,67 @@
+# Update path
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:$HOME/.bin:$HOME/.local/bin:$PATH"
+
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+
+if [[ `uname` == "Darwin" ]]; then
+  export LC_CTYPE=en_US.UTF-8
+  export LC_ALL=en_US.UTF-8
+else
+  alias ls='ls --color=auto'
+fi
+
+export IGNOREEOF=1
+export PYTHONDONTWRITEBYTECODE=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export PIP_REQUIRE_VENV=1
+
+HISTFILE=~/.config/zsh/.histfile
+HISTSIZE=5000
+SAVEHIST=100000
+
+# Change directory aliases
+alias home='cd ~'
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Search command line history
+alias h="history | grep "
+
+# Search running processes
+alias p="ps aux | grep "
+
+# Search files in the current folder
+alias f="find . | grep "
+
+# Aliases for multiple directory listing commands
+alias la='ls -Alh'                # show hidden files
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ls='ls -aFhG'  # macOS
+else
+    alias ls='ls -aFh --color=always'  # Linux
+fi
+
+alias lx='ls -lXBh'               # sort by extension
+alias lk='ls -lSrh'               # sort by size
+alias lc='ls -ltcrh'              # sort by change time
+alias lu='ls -lturh'              # sort by access time
+alias lr='ls -lRh'                # recursive ls
+alias lt='ls -ltrh'               # sort by date
+alias lm='ls -alh |more'          # pipe through 'more'
+alias lw='ls -xAh'                # wide listing format
+alias ll='ls -Fls'                # long listing format
+alias labc='ls -lap'              # alphabetical sort
+
+# Aliases to modified commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias ps='ps auxf'
+alias less='less -R'
+

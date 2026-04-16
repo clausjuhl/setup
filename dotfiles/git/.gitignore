@@ -1,0 +1,11 @@
+*.o
+*.pyc
+*.pyo
+*.bak
+.vscode
+.venv
+.DS_Store
+Thumbs.db
+@eaDir
+vim/.netrwhist
+vim/sessions
